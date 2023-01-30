@@ -1,0 +1,25 @@
+/* Default light theme styles */
+body {
+    background-color: white;
+    color: black;
+
+    .box {
+        background-color: pink;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: black;
+    color: white;
+
+    .box {
+        background-color: red;
+    }
+}
+
+.dark-theme #toggle-btn {
+    color: purple;
+}

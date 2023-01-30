@@ -1,24 +1,21 @@
-const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const toggleBtn = document.getElementById("toggle-btn");
 
+// Check if a theme has been saved in localStorage
 const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.toggle("light-theme");
+
+// Apply the saved theme on page load
+if(currentTheme === "dark-theme"){
+  document.body.classList.add("dark-theme")
+}else{
+  document.body.classList.add("light-theme")
 }
 
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    var theme = document.body.classList.contains("light-theme")
-      ? "light"
-      : "dark";
-  } else {
-    document.body.classList.toggle("dark-theme");
-    var theme = document.body.classList.contains("dark-theme")
-      ? "dark"
-      : "light";
-  }
-  localStorage.setItem("theme", theme);
+toggleBtn.addEventListener("click", function() {
+  // Toggle the "dark-theme" class on the body
+  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("light-theme");
+  // Get the current theme
+  const currentTheme = document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
+  // Save the current theme in localStorage
+  localStorage.setItem("theme", currentTheme);
 });
