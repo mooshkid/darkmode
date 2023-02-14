@@ -1,25 +1,41 @@
-/* Default light theme styles */
-body {
-    background-color: white;
-    color: black;
+// Define theme colors
+$pink-color: hsl(322, 100%, 50%);
+$blue-color: #3bc9db;
+$white-color: hsl(0, 0%, 96%);
+$black-color: hsl(0, 0%, 7%);
 
-    .box {
-        background-color: pink;
-        height: 50px;
-        width: 50px;
-    }
+// Define theme maps
+$themes: (
+	dark: (
+		background: $black-color,
+		text: $white-color,
+	),
+	light: (
+		background: $white-color,
+		text: $pink-color,
+	),
+);
+
+// Mixin to apply theme colors
+@mixin apply-theme($theme) {
+	background-color: map-get(map-get($themes, $theme), background);
+	color: map-get(map-get($themes, $theme), text);
 }
 
-/* Dark theme styles */
+// Function to return a specific theme color
+@function theme-color($theme, $color) {
+	@return map-get(map-get($themes, $theme), $color);
+}
+
+// Define theme classes
 .dark-theme {
-    background-color: black;
-    color: white;
+	@include apply-theme(dark);
 
-    .box {
-        background-color: red;
-    }
+	button {
+		color: theme-color(dark, text);
+	}
 }
 
-.dark-theme #toggle-btn {
-    color: purple;
+.light-theme {
+	@include apply-theme(light);
 }
