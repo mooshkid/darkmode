@@ -1,3 +1,7 @@
+// As of Dart Sass 2.0.0, !global assignments won't be able to declare new variables.
+// Recommendation: add `$theme-map: null` at the stylesheet root.
+$theme-map: null;
+
 // Define theme colors
 $pink-color: hsl(322, 100%, 50%);
 $blue-color: #3bc9db;
@@ -9,33 +13,37 @@ $themes: (
 	dark: (
 		background: $black-color,
 		text: $white-color,
+		h1: $blue-color,
 	),
 	light: (
 		background: $white-color,
 		text: $pink-color,
+		h1: #f6ad74,
 	),
 );
 
-// Mixin to apply theme colors
-@mixin apply-theme($theme) {
-	background-color: map-get(map-get($themes, $theme), background);
-	color: map-get(map-get($themes, $theme), text);
-}
-
-// Function to return a specific theme color
-@function theme-color($theme, $color) {
-	@return map-get(map-get($themes, $theme), $color);
-}
-
-// Define theme classes
-.dark-theme {
-	@include apply-theme(dark);
-
-	button {
-		color: theme-color(dark, text);
+@mixin themed($themes) {
+	@each $theme, $values in $themes {
+		.#{$theme}-theme {
+			$theme-map: $values !global;
+			@content;
+		}
 	}
 }
-
-.light-theme {
-	@include apply-theme(light);
+@function theme($key) {
+	@return map-get($theme-map, $key);
 }
+
+@include themed($themes) {
+	body {
+		color: theme("text");
+		background-color: theme("background");
+	}
+	button {
+		background-color: theme("background");
+		color: theme("text");
+	}
+	h1 {
+		color: theme("h1");
+	}
+} ;

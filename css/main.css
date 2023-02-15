@@ -1,14 +1,25 @@
-.dark-theme {
+.dark-theme body {
+  color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0deg, 0%, 7%);
+}
+.dark-theme button {
   background-color: hsl(0deg, 0%, 7%);
   color: hsl(0deg, 0%, 96%);
 }
-.dark-theme button {
-  color: hsl(0deg, 0%, 96%);
+.dark-theme h1 {
+  color: #3bc9db;
 }
 
-.light-theme {
+.light-theme body {
+  color: hsl(322deg, 100%, 50%);
+  background-color: hsl(0deg, 0%, 96%);
+}
+.light-theme button {
   background-color: hsl(0deg, 0%, 96%);
   color: hsl(322deg, 100%, 50%);
+}
+.light-theme h1 {
+  color: #f6ad74;
 }
 
 * {
