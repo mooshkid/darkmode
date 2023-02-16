@@ -6,7 +6,8 @@
   background-color: hsl(0deg, 0%, 7%);
   color: hsl(0deg, 0%, 96%);
 }
-.dark-theme h1 {
+.dark-theme h1,
+.dark-theme a {
   color: #3bc9db;
 }
 
@@ -18,7 +19,8 @@
   background-color: hsl(0deg, 0%, 96%);
   color: hsl(322deg, 100%, 50%);
 }
-.light-theme h1 {
+.light-theme h1,
+.light-theme a {
   color: #f6ad74;
 }
 
@@ -51,4 +53,39 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+header {
+  padding: 2em 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0 1em;
+}
+
+.nav-menu-list {
+  display: flex;
+}
+.nav-menu-list a {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.dark-theme .nav-menu-list a {
+  background-color: #454545;
+  color: hsl(0deg, 0%, 96%);
+}
+
+.light-theme .nav-menu-list a {
+  background-color: #f6ad74;
+  color: hsl(322deg, 100%, 50%);
+}
+
+#toggle-btn {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=main.css.map */

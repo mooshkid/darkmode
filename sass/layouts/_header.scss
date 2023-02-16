@@ -1,0 +1,30 @@
+header {
+	padding: 2em 0;
+}
+.nav-menu {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+	padding: 0 1em;
+}
+.nav-menu-list {
+	display: flex;
+	a {
+		padding: 10px 20px;
+		border-radius: 10px;
+	}
+}
+
+@include themed($themes) {
+	.nav-menu-list {
+		a {
+			background-color: theme("secondary_bg");
+			color: theme("text");
+		}
+	}
+}
+#toggle-btn {
+	width: 30px;
+	height: 30px;
+}

@@ -6,16 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark/Light Theme Website</title>
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <button id="toggle-btn">Toggle Theme</button>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-menu-list"><a href="">Home</a></li>
+                <li class="nav-menu-list"><a href="">About</a></li>
+                <li class="nav-menu-list"><a href="">Projects</a></li>
+                <li class="nav-menu-list"><a href="">Contact</a></li>
+                <li class="nav-menu-list">
+                    <button id="toggle-btn" aria-label="toggle darkmode">
+                        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                            <path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
     <h1>Welcome to my website!</h1>
     <p>This website has a dark and light theme toggle button.</p>
-    <div class="box">Change Color</div>
 </body>
 
 </html>

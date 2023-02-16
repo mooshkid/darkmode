@@ -13,11 +13,13 @@ $themes: (
 	dark: (
 		background: $black-color,
 		text: $white-color,
+		secondary_bg: lighten($black-color, 20),
 		h1: $blue-color,
 	),
 	light: (
 		background: $white-color,
 		text: $pink-color,
+		secondary_bg: #f6ad74,
 		h1: #f6ad74,
 	),
 );
@@ -43,7 +45,8 @@ $themes: (
 		background-color: theme("background");
 		color: theme("text");
 	}
-	h1 {
+	h1,
+	a {
 		color: theme("h1");
 	}
 } ;
