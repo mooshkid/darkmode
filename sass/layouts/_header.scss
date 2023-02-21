@@ -1,12 +1,18 @@
 header {
 	padding: 2em 0;
+
+	.container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1rem;
+	}
 }
 .nav-menu {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 20px;
-	padding: 0 1em;
 }
 .nav-menu-list {
 	display: flex;
@@ -15,7 +21,6 @@ header {
 		border-radius: 10px;
 	}
 }
-
 @include themed($themes) {
 	.nav-menu-list {
 		a {
@@ -24,7 +29,44 @@ header {
 		}
 	}
 }
-#toggle-btn {
-	width: 30px;
-	height: 30px;
+
+// THEME TOGGLE SWITCH
+/* Hide the default checkbox */
+#toggle-switch {
+	display: flex;
+	input {
+		display: none;
+	}
+}
+/* Style the slider */
+$slider-width: 50px;
+$slider-height: 25px;
+
+.slider {
+	position: relative;
+	display: inline-block;
+	width: $slider-width;
+	height: $slider-height;
+	background-color: #ccc;
+	border-radius: $slider-width;
+}
+/* Style the slider's thumb */
+$thumb-gap: 2px;
+.slider::before {
+	position: absolute;
+	content: "";
+	width: calc($slider-height - (2 * $thumb-gap));
+	height: calc($slider-height - (2 * $thumb-gap));
+	border-radius: 50%;
+	background-color: white;
+	top: $thumb-gap;
+	left: $thumb-gap;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 01.55);
+}
+/* Style the slider when it's checked */
+input:checked + .slider {
+	background-color: $blue-color;
+}
+input:checked + .slider::before {
+	transform: translateX(25px);
 }

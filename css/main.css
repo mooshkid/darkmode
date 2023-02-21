@@ -1,9 +1,9 @@
 .dark-theme body {
   color: hsl(0deg, 0%, 96%);
-  background-color: hsl(0deg, 0%, 7%);
+  background-color: #232323;
 }
 .dark-theme button {
-  background-color: hsl(0deg, 0%, 7%);
+  background-color: #232323;
   color: hsl(0deg, 0%, 96%);
 }
 .dark-theme h1,
@@ -22,6 +22,16 @@
 .light-theme h1,
 .light-theme a {
   color: #f6ad74;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-out;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 * {
@@ -58,13 +68,18 @@ img {
 header {
   padding: 2em 0;
 }
+header .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
 
 .nav-menu {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  padding: 0 1em;
 }
 
 .nav-menu-list {
@@ -76,7 +91,7 @@ header {
 }
 
 .dark-theme .nav-menu-list a {
-  background-color: #454545;
+  background-color: #565656;
   color: hsl(0deg, 0%, 96%);
 }
 
@@ -85,7 +100,42 @@ header {
   color: hsl(322deg, 100%, 50%);
 }
 
-#toggle-btn {
-  width: 30px;
-  height: 30px;
+/* Hide the default checkbox */
+#toggle-switch {
+  display: flex;
+}
+#toggle-switch input {
+  display: none;
+}
+
+/* Style the slider */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+
+/* Style the slider's thumb */
+.slider::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Style the slider when it's checked */
+input:checked + .slider {
+  background-color: #3bc9db;
+}
+
+input:checked + .slider::before {
+  transform: translateX(25px);
 }/*# sourceMappingURL=main.css.map */
