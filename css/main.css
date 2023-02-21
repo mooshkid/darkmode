@@ -104,18 +104,14 @@ header .container {
 #toggle-switch {
   display: flex;
 }
-#toggle-switch input {
-  display: none;
-}
-
 /* Style the slider */
 .slider {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 25px;
-  background-color: #ccc;
   border-radius: 50px;
+  background-color: #3bc9db;
 }
 
 /* Style the slider's thumb */
@@ -133,7 +129,7 @@ header .container {
 
 /* Style the slider when it's checked */
 input:checked + .slider {
-  background-color: #3bc9db;
+  background-color: #ccc;
 }
 
 input:checked + .slider::before {

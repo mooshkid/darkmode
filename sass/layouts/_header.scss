@@ -35,7 +35,7 @@ header {
 #toggle-switch {
 	display: flex;
 	input {
-		display: none;
+		// display: none;
 	}
 }
 /* Style the slider */
@@ -47,8 +47,8 @@ $slider-height: 25px;
 	display: inline-block;
 	width: $slider-width;
 	height: $slider-height;
-	background-color: #ccc;
 	border-radius: $slider-width;
+	background-color: $blue-color;
 }
 /* Style the slider's thumb */
 $thumb-gap: 2px;
@@ -65,8 +65,8 @@ $thumb-gap: 2px;
 }
 /* Style the slider when it's checked */
 input:checked + .slider {
-	background-color: $blue-color;
+	background-color: #ccc;
 }
 input:checked + .slider::before {
-	transform: translateX(25px);
+	transform: translateX($slider-height);
 }
