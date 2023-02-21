@@ -1,3 +1,4 @@
+// THEME STUFF
 // Check if a theme has been saved in localStorage
 const currentTheme = localStorage.getItem("theme");
 

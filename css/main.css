@@ -104,6 +104,10 @@ header .container {
 #toggle-switch {
   display: flex;
 }
+#toggle-switch input {
+  display: none;
+}
+
 /* Style the slider */
 .slider {
   position: relative;
