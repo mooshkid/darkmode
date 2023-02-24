@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Masayuki Yamanaka">
     <meta name="description" content="My second portfolio with dark and light themes">
-    <title>Dark/Light Theme Website</title>
+    <title>Masa's Second Portfolio | Dark&Light Theme</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <script src="script.js" defer></script>
@@ -24,15 +24,33 @@
                     <li class="nav-menu-list"><a href="">Contact</a></li>
                 </ul>
             </nav>
-            <label id="toggle-switch">
-                <input type="checkbox" onclick="toggleTheme()">
-                <span class="slider"></span>
-            </label>
+            <div class="nav-buttons">
+                <label id="toggle-switch">
+                    <input type="checkbox" onclick="toggleTheme()">
+                    <span class="slider"></span>
+                </label>
+                <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false">
+                    <svg viewBox="0 0 100 100" width="50">
+                        <rect class="top-bar" width="80" height="10" x="10" y="25" rx="5"></rect>
+                        <rect class="middle-bar" width="80" height="10" x="10" y="45" rx="5"></rect>
+                        <rect class="bottom-bar" width="80" height="10" x="10" y="65" rx="5"></rect>
+                    </svg>
+                </button>
+            </div>
 
         </div>
     </header>
-    <h1>Welcome to my website!</h1>
-    <p>This website has a dark and light theme toggle button.</p>
+    <main>
+        <section>
+            <div class="container">
+                <h1>Welcome to my website!</h1>
+                <p>This website has a dark and light theme toggle button.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>

@@ -19,21 +19,29 @@ header {
 	a {
 		padding: 10px 20px;
 		border-radius: 10px;
+        font-weight: 300;
 	}
 }
 @include themed($themes) {
 	.nav-menu-list {
 		a {
-			background-color: theme("secondary_bg");
-			color: theme("text");
+			// background-color: theme("bg_secondary");
+			// color: theme("text");
 		}
 	}
 }
 
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
 // THEME TOGGLE SWITCH
 /* Hide the default checkbox */
 #toggle-switch {
-	display: flex;
 	input {
 		display: none;
 	}
@@ -44,7 +52,7 @@ $slider-height: 25px;
 
 .slider {
 	position: relative;
-	display: inline-block;
+	display: block;
 	width: $slider-width;
 	height: $slider-height;
 	border-radius: $slider-width;
@@ -65,8 +73,17 @@ $thumb-gap: 2px;
 }
 /* Style the slider when it's checked */
 input:checked + .slider {
-	background-color: #ccc;
+	background-color: $gray-color;
 }
 input:checked + .slider::before {
 	transform: translateX($slider-height);
 }
+
+
+// Hamburger 
+@include themed($themes) {
+	.hamburger {
+            background: transparent;
+			fill: theme("button");
+		}
+	}

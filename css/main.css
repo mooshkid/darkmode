@@ -6,22 +6,26 @@
   background-color: #232323;
   color: hsl(0deg, 0%, 96%);
 }
-.dark-theme h1,
-.dark-theme a {
+.dark-theme h1 {
   color: #3bc9db;
+}
+.dark-theme a {
+  color: hsl(0deg, 0%, 96%);
 }
 
 .light-theme body {
-  color: hsl(322deg, 100%, 50%);
+  color: #121212;
   background-color: hsl(0deg, 0%, 96%);
 }
 .light-theme button {
   background-color: hsl(0deg, 0%, 96%);
+  color: #121212;
+}
+.light-theme h1 {
   color: hsl(322deg, 100%, 50%);
 }
-.light-theme h1,
 .light-theme a {
-  color: #f6ad74;
+  color: #121212;
 }
 
 body {
@@ -88,22 +92,17 @@ header .container {
 .nav-menu-list a {
   padding: 10px 20px;
   border-radius: 10px;
+  font-weight: 300;
 }
 
-.dark-theme .nav-menu-list a {
-  background-color: #565656;
-  color: hsl(0deg, 0%, 96%);
-}
-
-.light-theme .nav-menu-list a {
-  background-color: #f6ad74;
-  color: hsl(322deg, 100%, 50%);
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Hide the default checkbox */
-#toggle-switch {
-  display: flex;
-}
 #toggle-switch input {
   display: none;
 }
@@ -111,7 +110,7 @@ header .container {
 /* Style the slider */
 .slider {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 50px;
   height: 25px;
   border-radius: 50px;
@@ -138,4 +137,14 @@ input:checked + .slider {
 
 input:checked + .slider::before {
   transform: translateX(25px);
-}/*# sourceMappingURL=main.css.map */
+}
+
+.dark-theme .hamburger {
+  background: transparent;
+  fill: #3bc9db;
+}
+
+.light-theme .hamburger {
+  background: transparent;
+  fill: hsl(322deg, 100%, 50%);
+}

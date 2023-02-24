@@ -5,24 +5,34 @@ $theme-map: null;
 // Define theme colors
 $pink-color: hsl(322, 100%, 50%);
 $blue-color: #3bc9db;
-$white-color: hsl(0, 0%, 96%);
-// $black-color: rgb(35, 35, 35);
-$black-color: #232323;
 $yellow-color: #ffbd07;
+
+$white-color: hsl(0, 0%, 96%);
+$gray-color: #ccc;
+
+$black-text: #121212;
+$black-bg: #232323;
+
+
+$nav-bg-color: #3700B3;
 
 // Define theme maps
 $themes: (
 	dark: (
-		background: $black-color,
+		background: $black-bg,
 		text: $white-color,
-		secondary_bg: lighten($black-color, 20),
-		h1: $blue-color,
+		bg_secondary: lighten($black-bg, 10),
+        text_secondary: $blue-color,
+        button: $blue-color,
+        nav: $blue-color,
 	),
 	light: (
 		background: $white-color,
-		text: $pink-color,
-		secondary_bg: #f6ad74,
-		h1: #f6ad74,
+		text: $black-text,
+		bg_secondary: $gray-color,
+		text_secondary: $pink-color,
+        button: $pink-color,
+        nav: $nav-bg-color,
 	),
 );
 
@@ -47,8 +57,10 @@ $themes: (
 		background-color: theme("background");
 		color: theme("text");
 	}
-	h1,
-	a {
-		color: theme("h1");
+	h1 {
+		color: theme("text_secondary");
 	}
+    a {
+        color: theme("text")
+    }
 } ;
