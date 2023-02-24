@@ -140,10 +140,9 @@ input:checked + .slider::before {
 }
 .hamburger[aria-expanded=true] rect {
   transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
-  transform-origin: center;
 }
 .hamburger[aria-expanded=true] rect:not(:nth-child(2)) {
-  y: 45px;
+  y: 50px;
 }
 .hamburger[aria-expanded=true] rect:nth-child(1) {
   rotate: 45deg;

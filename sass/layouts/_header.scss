@@ -100,10 +100,10 @@ input:checked + .slider::before {
                 rotate 300ms ease-in 300ms,
                 opacity 0ms 300ms,
             ;
-            transform-origin: center;
+            // transform-origin: center;
 
             &:not(:nth-child(2)) {
-                y: 45px;
+                y: 50px;
             }
             &:nth-child(1) {
                 rotate: 45deg;

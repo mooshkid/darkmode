@@ -26,15 +26,17 @@ function toggleTheme() {
 };
 
 
-// Hamburger button
-const hamburgerButton = document.querySelector('.hamburger');
 
-hamburgerButton.addEventListener('click', () => {
-    const isOpened = hamburgerButton.getAttribute('aria-expanded');
+// ADD NAV STUFF HERE I THINK
+// Hamburger button
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', () => {
+    const isOpened = hamburger.getAttribute('aria-expanded');
     if (isOpened === 'false') {
-        hamburgerButton.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-expanded', 'true');
     }
     else {
-        hamburgerButton.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-expanded', 'false');
     }
 });
