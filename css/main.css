@@ -2,10 +2,6 @@
   color: hsl(0deg, 0%, 96%);
   background-color: #232323;
 }
-.dark-theme button {
-  background-color: #232323;
-  color: hsl(0deg, 0%, 96%);
-}
 .dark-theme h1 {
   color: #3bc9db;
 }
@@ -16,10 +12,6 @@
 .light-theme body {
   color: #121212;
   background-color: hsl(0deg, 0%, 96%);
-}
-.light-theme button {
-  background-color: hsl(0deg, 0%, 96%);
-  color: #121212;
 }
 .light-theme h1 {
   color: hsl(322deg, 100%, 50%);
@@ -106,6 +98,9 @@ header .container {
 #toggle-switch input {
   display: none;
 }
+#toggle-switch:hover {
+  cursor: pointer;
+}
 
 /* Style the slider */
 .slider {
@@ -139,12 +134,33 @@ input:checked + .slider::before {
   transform: translateX(25px);
 }
 
-.dark-theme .hamburger {
+.hamburger rect {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+.hamburger[aria-expanded=true] rect {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  transform-origin: center;
+}
+.hamburger[aria-expanded=true] rect:not(:nth-child(2)) {
+  y: 45px;
+}
+.hamburger[aria-expanded=true] rect:nth-child(1) {
+  rotate: 45deg;
+}
+.hamburger[aria-expanded=true] rect:nth-child(2) {
+  opacity: 0;
+}
+.hamburger[aria-expanded=true] rect:nth-child(3) {
+  rotate: -45deg;
+}
+
+.dark-theme .hamburger svg {
   background: transparent;
   fill: #3bc9db;
 }
 
-.light-theme .hamburger {
+.light-theme .hamburger svg {
   background: transparent;
   fill: hsl(322deg, 100%, 50%);
 }

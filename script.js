@@ -24,3 +24,17 @@ function toggleTheme() {
   // Check the toggle-switch input checkbox when the theme is light
   document.querySelector('#toggle-switch input[type="checkbox"]').checked = currentTheme === 'light-theme';
 };
+
+
+// Hamburger button
+const hamburgerButton = document.querySelector('.hamburger');
+
+hamburgerButton.addEventListener('click', () => {
+    const isOpened = hamburgerButton.getAttribute('aria-expanded');
+    if (isOpened === 'false') {
+        hamburgerButton.setAttribute('aria-expanded', 'true');
+    }
+    else {
+        hamburgerButton.setAttribute('aria-expanded', 'false');
+    }
+});

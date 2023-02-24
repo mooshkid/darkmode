@@ -45,6 +45,9 @@ header {
 	input {
 		display: none;
 	}
+    &:hover {
+        cursor: pointer;
+    }
 }
 /* Style the slider */
 $slider-width: 50px;
@@ -81,9 +84,42 @@ input:checked + .slider::before {
 
 
 // Hamburger 
+.hamburger {
+    rect {
+        transition: 
+            y 300ms ease-in 300ms,
+            rotate 300ms ease-in,
+            opacity 0ms 300ms,
+        ;
+        transform-origin: center;
+    }
+    &[aria-expanded="true"] {
+        rect {
+            transition: 
+                y 300ms ease-in,
+                rotate 300ms ease-in 300ms,
+                opacity 0ms 300ms,
+            ;
+            transform-origin: center;
+
+            &:not(:nth-child(2)) {
+                y: 45px;
+            }
+            &:nth-child(1) {
+                rotate: 45deg;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                rotate: -45deg;
+            }
+        }
+    }
+}
 @include themed($themes) {
-	.hamburger {
-            background: transparent;
-			fill: theme("button");
-		}
-	}
+	.hamburger svg {
+        background: transparent;
+        fill: theme("button");
+    }
+}
