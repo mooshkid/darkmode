@@ -142,7 +142,7 @@ input:checked + .slider::before {
   transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
 }
 .hamburger[aria-expanded=true] rect:not(:nth-child(2)) {
-  y: 50px;
+  y: 45px;
 }
 .hamburger[aria-expanded=true] rect:nth-child(1) {
   rotate: 45deg;

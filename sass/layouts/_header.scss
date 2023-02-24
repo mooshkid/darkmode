@@ -103,7 +103,7 @@ input:checked + .slider::before {
             // transform-origin: center;
 
             &:not(:nth-child(2)) {
-                y: 50px;
+                y: 45px;
             }
             &:nth-child(1) {
                 rotate: 45deg;
