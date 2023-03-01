@@ -1,20 +1,20 @@
 .dark-theme body {
-  color: hsl(0deg, 0%, 96%);
+  color: hsl(0, 0%, 96%);
   background-color: #232323;
 }
 .dark-theme h1 {
   color: #3bc9db;
 }
 .dark-theme a {
-  color: hsl(0deg, 0%, 96%);
+  color: hsl(0, 0%, 96%);
 }
 
 .light-theme body {
   color: #121212;
-  background-color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
 }
 .light-theme h1 {
-  color: hsl(322deg, 100%, 50%);
+  color: hsl(322, 100%, 50%);
 }
 .light-theme a {
   color: #121212;
@@ -161,5 +161,5 @@ input:checked + .slider::before {
 
 .light-theme .hamburger svg {
   background: transparent;
-  fill: hsl(322deg, 100%, 50%);
+  fill: hsl(322, 100%, 50%);
 }
